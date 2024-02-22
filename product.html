@@ -11,10 +11,10 @@
 
 <body>
     <!--Responsive Navbar-->
-    <nav class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky top-0 z-40">
+    <nav class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky top-0 z-10">
         <h1 class="text-2xl">GREENDEN</h1>
         <!--Nav Bar Icon-->
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
             class="w-6 h-6 md:hidden">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
@@ -24,48 +24,80 @@
             <li><a class="hover:underline hover:text-black" href="contact.html">Contact Us</a></li>
         </ul>
     </nav>
-<section class="text-center">
+    <!-- Side Navbar-->
+    <section id="sidenav" class="bg-green-100 fixed z-20 top-0 transition-all duration-1000" style="width: 50%; height: 100vh; right: -50%;">
+        <div class="text-right p-5">
+            <p id="close-nav" class="inline cursor-pointer">X</p>
+            
+        </div>
+        <ul class="flex flex-col gap-10 items-center text-gray-600">
+            <li><a class="hover:underline hover:text-black" href="index.html">Home</a></li>
+            <li><a class="hover:underline hover:text-black" href="product.html">Products</a></li>
+            <li><a class="hover:underline hover:text-black" href="contact.html">Contact Us</a></li>
+        </ul>
+     </section>
+<section class="p-4 text-center">
     <h2 class="font-bold text-3xl mt-5 text-center">Products</h2>
-        <input type="text" name="text" placeholder="Search all the products here,..." id="text" class="border border-black p-2 m-3 w-4/5"><br>
-        <div class="grid grid-cols-2 mt-5 mb-10 gap-5 md:grid-cols-4">
-            <div>
+        <input  type="text" name="text" placeholder="Search all the products here,..." id="search" class="border border-black p-2 m-3 w-4/5"><br>
+        <div id="product-container" class="grid grid-cols-2 mt-5 mb-10 gap-5 md:grid-cols-4">
+            <div class="text-center">
                 <img src="./images/f1.png" class="inline hover:shadow-xl transform hover:translate-y-2" alt="flower 1">
-                <h1>Rose Flower pot</h1>
+                <h1>Rose Flower pot 1</h1>
                 <p>$20</p>
             </div>
-            <div>
+            <div class="text-center">
                 <img src="./images/f2.png" class="inline hover:shadow-xl transform hover:translate-y-2" alt="flower 2">
                 <h1>Rose Flower pot 2</h1>
                 <p>$30</p>
             </div>
-            <div>
+            <div class="text-center">
                 <img src="./images/f3.png" class="inline hover:shadow-xl transform hover:translate-y-2" alt="flower 3">
                 <h1>Rose Flower pot 3</h1>
                 <p>$22</p>
             </div>
-            <div>
+            <div class="text-center">
                 <img src="./images/f4.png" class="inline hover:shadow-xl transform hover:translate-y-2" alt="flower 4">
-                <h1>Rose Flower pot 4</h1>
+                <h1>Carnation Flower pot 4</h1>
                 <p>$19</p>
             </div>
-            <div>
+            <div class="text-center">
                 <img src="./images/f5.png" class="inline hover:shadow-xl transform hover:translate-y-2" alt="flower 5">
-                <h1>Rose Flower pot 5</h1>
+                <h1>Marigold Flower pot 5</h1>
                 <p>$19</p>
             </div>
-            <div>
+            <div class="text-center">
                 <img src="./images/f6.png" class="inline hover:shadow-xl transform hover:translate-y-2" alt="flower 6">
-                <h1>Rose Flower pot 6</h1>
+                <h1>Jasmine Flower pot 6</h1>
                 <p>$19</p>
             </div>
-            <div>
+            <div class="text-center">
                 <img src="./images/f2.png" class="inline hover:shadow-xl transform hover:translate-y-2" alt="flower 2">
-                <h1>Rose Flower pot 2</h1>
+                <h1>Tulip Flower pot 7</h1>
                 <p>$30</p>
             </div>
-            <div>
+            <div class="text-center">
                 <img src="./images/f3.png" class="inline hover:shadow-xl transform hover:translate-y-2" alt="flower 3">
-                <h1>Rose Flower pot 3</h1>
+                <h1>Rose Flower pot 8</h1>
+                <p>$22</p>
+            </div>
+            <div class="text-center">
+                <img src="./images/f3.png" class="inline hover:shadow-xl transform hover:translate-y-2" alt="flower 3">
+                <h1>Rose Flower pot 9</h1>
+                <p>$22</p>
+            </div>
+            <div class="text-center">
+                <img src="./images/f3.png" class="inline hover:shadow-xl transform hover:translate-y-2" alt="flower 3">
+                <h1>butter Flower pot 10</h1>
+                <p>$22</p>
+            </div>
+            <div class="text-center">
+                <img src="./images/f3.png" class="inline hover:shadow-xl transform hover:translate-y-2" alt="flower 3">
+                <h1>sun Flower pot 11</h1>
+                <p>$22</p>
+            </div>
+            <div class="text-center">
+                <img src="./images/f3.png" class="inline hover:shadow-xl transform hover:translate-y-2" alt="flower 3">
+                <h1>Lilly Flower pot 12</h1>
                 <p>$22</p>
             </div>
         </div>
@@ -78,3 +110,6 @@
         <p>For plant care tips, our featured plant of the week, exclusive offers and discounts.</p>
         <p>&copy; 2024 GreenDen.com All rights reserved.</p>
         </section>
+        <script src="product.js"></script>
+        </body>
+        </html>
